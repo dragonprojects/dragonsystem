@@ -28,6 +28,7 @@ echo "Installing software..."
 sudo apt-get install bookworm
 sudo apt-get install rythmbox
 sudo apt-get install transmission-cli transmission-common transmission-daemon
+sudo apt-get install firefox
 sudo apt-get install vlc
 sudo snap install mailspring
 sudo snap install qalculate
