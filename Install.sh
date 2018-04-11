@@ -28,9 +28,10 @@ echo "Installing software..."
 sudo apt-get install bookworm
 sudo apt-get install rythmbox
 sudo apt-get install transmission-cli transmission-common transmission-daemon
-sudo snap install firefoxsudo apt-get install firefox
+sudo apt-get install firefox
 sudo apt-get install vlc
 sudo snap install mailspring
+sudo snap install qalculate
 sudo apt-get install pinta
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
