@@ -16,6 +16,7 @@ sudo add-apt-repository ppa:libreoffice/ppa
 sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
 sudo add-apt-repository ppa:bookworm-team/bookworm
 sudo add-apt-repository ppa:embrosyn/cinnamon
+sudo add-apt-repository ppa:leaeasy/dde
 sudo apt-get update
 
 echo "Installing dependencies..."
@@ -33,6 +34,7 @@ sudo apt-get install vlc
 sudo snap install mailspring
 sudo snap install qalculate
 sudo apt-get install pinta
+sudo apt-get install dde-calendar
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
 rm atom-amd64.deb
