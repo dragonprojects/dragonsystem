@@ -12,7 +12,6 @@ sudo apt-get update
 
 echo "Adding repositories to system..."
 sudo add-apt-repository ppa:transmissionbt/ppa
-sudo add-apt-repository ppa:libreoffice/ppa
 sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
 sudo add-apt-repository ppa:bookworm-team/bookworm
 sudo add-apt-repository ppa:embrosyn/cinnamon
