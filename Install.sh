@@ -34,7 +34,7 @@ sudo snap install mailspring
 sudo snap install qalculate
 sudo apt-get install pinta
 sudo apt-get install dde-calendar
-sudo apt-get install dde-control-center
+sudo apt-get install deepin-system-monitor
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
 rm atom-amd64.deb
