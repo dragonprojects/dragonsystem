@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Welcome to the Dragon OS installer for Ubuntu!"
-echo "The installer will automatically start in a moment."
+echo "Welcome to the Dragon OS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
+echo "PLEASE MAKE SURE YOU ARE USING A STABLE INTERNET CONNECTION, PREFERABLY WIRED!"
 echo "IF YOU WANT TO CANCEL THE INSTALLATION, TERMINATE THIS PROCESS NOW!"
 sleep 10
 echo "The installer will now start installing Dragon OS."
@@ -21,8 +21,9 @@ sudo apt-get update
 echo "Installing dependencies..."
 sudo apt-get install gnome-keyring
 sudo apt-get install git
-sudo apt install snapd
+sudo apt-get install snapd
 sudo apt-get install gdebi-core
+sudo apt-get install unzip
 
 echo "Installing software..."
 sudo apt-get install bookworm
@@ -35,6 +36,7 @@ sudo snap install qalculate
 sudo apt-get install pinta
 sudo apt-get install dde-calendar
 sudo apt-get install deepin-system-monitor
+sudo apt-get install deepin-screen-recorder
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
 rm atom-amd64.deb
@@ -62,7 +64,14 @@ git clone https://github.com/KenHarkey/plank-themes.git
 cd plank-themes
 cp -r shade ~/.local/share/plank/themes/
 cd
-
+rm -rf plank-themes
+mkdir Roboto
+cd Roboto
+wget -O Roboto.zip https://github.com/google/roboto/releases/download/v2.138/roboto-android.zip
+unzip Roboto.zip
+rm Roboto.zip
+cd
+cp -r Roboto /usr/local/share/fonts
 
 echo "Completing installation..."
 sudo apt-get update
