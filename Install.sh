@@ -56,6 +56,8 @@ cd
 
 echo "Installing desktop environment..."
 sudo apt install cinnamon
+sudo apt-get install plank
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
 git clone https://github.com/KenHarkey/plank-themes.git
 cd plank-themes
 cp -r shade ~/.local/share/plank/themes/
