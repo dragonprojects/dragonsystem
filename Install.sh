@@ -48,7 +48,7 @@ wget -O libpng-amd64.deb http://mirrors.edge.kernel.org/ubuntu/pool/main/libp/li
 sudo gdebi libpng-amd64.deb
 rm libpng-amd64.deb
 wget -O wps-amd64.deb http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
-sudo wps-amd64.deb
+sudo gdebi wps-amd64.deb
 rm wps-amd64.deb
 cd /tmp
 git clone https://github.com/iamdh4/ttf-wps-fonts.git
@@ -56,6 +56,9 @@ cd ttf-wps-fonts
 sudo bash install.sh
 rm -rf /tmp/ttf-wps-fonts
 cd
+wget -O franz-amd64.deb https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.18/franz_5.0.0-beta.18_amd64.deb
+sudo gdebi franz-amd64.deb
+rm franz-amd64.deb
 
 echo "Installing desktop environment..."
 sudo apt install cinnamon
