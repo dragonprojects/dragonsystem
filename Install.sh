@@ -13,10 +13,10 @@ sudo apt-get update
 
 echo "Adding repositories to system..."
 sudo add-apt-repository ppa:transmissionbt/ppa
-sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
 sudo add-apt-repository ppa:bookworm-team/bookworm
 sudo add-apt-repository ppa:embrosyn/cinnamon
 sudo add-apt-repository ppa:leaeasy/dde
+sudo add-apt-repository ppa:ricotz/docky
 sudo apt-get update
 
 echo "Installing dependencies..."
@@ -34,7 +34,6 @@ sudo apt-get install firefox
 sudo apt-get install vlc
 sudo snap install mailspring
 sudo snap install qalculate
-sudo apt-get install pinta
 sudo apt-get install dde-calendar
 sudo apt-get install deepin-system-monitor
 sudo apt-get install kazam
@@ -62,6 +61,24 @@ rm franz-amd64.deb
 
 echo "Installing desktop environment..."
 sudo apt install cinnamon
+dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/TOBEFILLEDIN'"
+dconf write /org/cinnamon/desktop-effects true
+dconf write /org/cinnamon/startup-animation true
+dconf write /org/cinnamon/sounds/login-enabled true
+dconf write /org/cinnamon/sounds/logout-enabled true
+dconf write /org/cinnamon/sounds/unplug-enabled true
+dconf write /org/cinnamon/sounds/tile-enabled true
+dconf write /org/cinnamon/sounds/plug-enabled true
+dconf write /org/cinnamon/sounds/switch-enabled true
+dconf write /org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll true
+dconf write /org/cinnamon/panels-resizable "['1:true']"
+dconf write /org/cinnamon/panels-height "['1:35']"
+git clone https://github.com/archqob/qob-theme.git
+cd qob-theme
+cp -r qob /usr/share/themes
+cd
+rm -rf qob-theme
+dconf write /org/cinnamon/theme/name "'qob'"
 sudo apt-get install plank
 gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
 git clone https://github.com/KenHarkey/plank-themes.git
@@ -76,6 +93,9 @@ unzip Roboto.zip
 rm Roboto.zip
 cd
 cp -r Roboto /usr/local/share/fonts
+
+echo "Cleaning up..."
+# Still has to be worked on...
 
 echo "Completing installation..."
 sudo apt-get update
