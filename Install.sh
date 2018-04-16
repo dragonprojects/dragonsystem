@@ -17,6 +17,7 @@ sudo add-apt-repository ppa:bookworm-team/bookworm
 sudo add-apt-repository ppa:embrosyn/cinnamon
 sudo add-apt-repository ppa:leaeasy/dde
 sudo add-apt-repository ppa:ricotz/docky
+sudo add-apt-repository ppa:daniruiz/flat-remix
 sudo apt-get update
 
 echo "Installing dependencies..."
@@ -93,6 +94,7 @@ unzip Roboto.zip
 rm Roboto.zip
 cd
 cp -r Roboto /usr/local/share/fonts
+sudo apt-get install flat-remix
 
 echo "Cleaning up..."
 # Still has to be worked on...
