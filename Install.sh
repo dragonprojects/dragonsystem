@@ -61,8 +61,14 @@ sudo gdebi franz-amd64.deb
 rm franz-amd64.deb
 
 echo "Installing desktop environment..."
+cd /usr/share/
+mkdir dragonos
+cd dragonos
+mkdir icons
+cd icons
+wget -O dragonos.gif https://github.com/jelle619/dragonos/raw/master/assets/icons/dragonprojects.gif
 sudo apt install cinnamon
-dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/TOBEFILLEDIN'"
+dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/dragonos/icons/dragonos.gif'"
 dconf write /org/cinnamon/desktop-effects true
 dconf write /org/cinnamon/startup-animation true
 dconf write /org/cinnamon/sounds/login-enabled true
