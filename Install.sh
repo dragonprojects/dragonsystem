@@ -67,6 +67,7 @@ cd dragonos
 mkdir icons
 cd icons
 wget -O dragonos.gif https://github.com/jelle619/dragonos/raw/master/assets/icons/dragonprojects.gif
+cd
 sudo apt install cinnamon
 dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/dragonos/icons/dragonos.gif'"
 dconf write /org/cinnamon/desktop-effects true
@@ -79,7 +80,7 @@ dconf write /org/cinnamon/sounds/plug-enabled true
 dconf write /org/cinnamon/sounds/switch-enabled true
 dconf write /org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll true
 dconf write /org/cinnamon/panels-resizable "['1:true']"
-dconf write /org/cinnamon/panels-height "['1:35']"
+dconf write /org/cinnamon/panels-height "['1:30']"
 git clone https://github.com/archqob/qob-theme.git
 cd qob-theme
 cp -r qob /usr/share/themes
@@ -101,10 +102,16 @@ rm Roboto.zip
 cd
 cp -r Roboto /usr/local/share/fonts
 sudo apt-get install flat-remix
+gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix"
 
 echo "Cleaning up..."
-# Still has to be worked on...
+# Not implemented yet. Please put the removal scripts for your specific Linux distrobution here.
 
 echo "Completing installation..."
 sudo apt-get update
 sudo apt-get upgrade
+
+echo "Installation complete!"
+echo "In a moment, your computer will restart to finish the installation."
+sleep 10
+sudo reboot
