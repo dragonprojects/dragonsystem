@@ -24,20 +24,15 @@ echo "Installing dependencies..."
 sudo apt-get install gnome-keyring
 sudo apt-get install git
 sudo apt-get install snapd
-sudo apt-get install gdebi-core
-sudo apt-get install unzip
+sudo apt-get install gdebi
 
 echo "Installing software..."
-sudo apt-get install bookworm
-sudo apt-get install rythmbox
-sudo apt-get install transmission-cli transmission-common transmission-daemon
 sudo apt-get install firefox
-sudo apt-get install vlc
+sudo snap install vlc
 sudo snap install mailspring
 sudo snap install qalculate
-sudo apt-get install dde-calendar
-sudo apt-get install deepin-system-monitor
-sudo apt-get install kazam
+sudo snap install atom
+sudo snap install discord
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
 rm atom-amd64.deb
