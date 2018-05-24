@@ -12,12 +12,9 @@ cd
 sudo apt-get update
 
 echo "Adding repositories to system..."
-sudo add-apt-repository ppa:transmissionbt/ppa
-sudo add-apt-repository ppa:bookworm-team/bookworm
-sudo add-apt-repository ppa:embrosyn/cinnamon
-sudo add-apt-repository ppa:leaeasy/dde
 sudo add-apt-repository ppa:ricotz/docky
 sudo add-apt-repository ppa:daniruiz/flat-remix
+sudo add-apt-repository ppa:ubuntubudgie/backports
 sudo apt-get update
 
 echo "Installing dependencies..."
@@ -55,33 +52,10 @@ wget -O franz-amd64.deb https://github.com/meetfranz/franz/releases/download/v5.
 sudo gdebi franz-amd64.deb
 rm franz-amd64.deb
 
-echo "Installing desktop environment..."
-cd /usr/share/
-mkdir dragonos
-cd dragonos
-mkdir icons
-cd icons
-wget -O dragonos.gif https://github.com/jelle619/dragonos/raw/master/assets/icons/dragonprojects.gif
-cd
-sudo apt install cinnamon
-dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/dragonos/icons/dragonos.gif'"
-dconf write /org/cinnamon/desktop-effects true
-dconf write /org/cinnamon/startup-animation true
-dconf write /org/cinnamon/sounds/login-enabled true
-dconf write /org/cinnamon/sounds/logout-enabled true
-dconf write /org/cinnamon/sounds/unplug-enabled true
-dconf write /org/cinnamon/sounds/tile-enabled true
-dconf write /org/cinnamon/sounds/plug-enabled true
-dconf write /org/cinnamon/sounds/switch-enabled true
-dconf write /org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll true
-dconf write /org/cinnamon/panels-resizable "['1:true']"
-dconf write /org/cinnamon/panels-height "['1:30']"
-git clone https://github.com/archqob/qob-theme.git
-cd qob-theme
-cp -r qob /usr/share/themes
-cd
-rm -rf qob-theme
-dconf write /org/cinnamon/theme/name "'qob'"
+echo "Installing core desktop environment..."
+sudo apt-get install budgie-desktop
+
+echo "Installing desktop environment additions..."
 sudo apt-get install plank
 gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
 git clone https://github.com/KenHarkey/plank-themes.git
