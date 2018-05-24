@@ -75,6 +75,9 @@ gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix"
 
 echo "Cleaning up..."
 # Not implemented yet. Please put the removal scripts for your specific Linux distrobution here.
+sudo apt-get --purge remove chromium
+sudo apt-get --purge remove mpv
+sudo apt-get purge libreoffice? libobasis?
 
 echo "Completing installation..."
 sudo apt-get update
