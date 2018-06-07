@@ -9,7 +9,6 @@ echo "The installer will now start installing Dragon OS."
 
 echo "Preparing for installation..."
 cd
-sudo apt-get update
 
 echo "Adding repositories to system..."
 sudo add-apt-repository ppa:ricotz/docky
