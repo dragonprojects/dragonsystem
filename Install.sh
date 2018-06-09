@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to the Dragon OS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
+echo "Welcome to the DragonOS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
 echo "MAKE SURE YOU ARE USING THE NEWEST VERSION OF YOUR DISTRIBUTION!"
 echo "PLEASE MAKE SURE YOU ARE USING A STABLE INTERNET CONNECTION, PREFERABLY WIRED!"
 echo "IF YOU WANT TO CANCEL THE INSTALLATION, TERMINATE THIS PROCESS NOW!"
