@@ -5,7 +5,7 @@ echo "MAKE SURE YOU ARE USING THE NEWEST VERSION OF YOUR DISTRIBUTION!"
 echo "PLEASE MAKE SURE YOU ARE USING A STABLE INTERNET CONNECTION, PREFERABLY WIRED!"
 echo "IF YOU WANT TO CANCEL THE INSTALLATION, TERMINATE THIS PROCESS NOW!"
 sleep 10
-echo "The installer will now start installing Dragon OS."
+echo "The installer will now start installing DragonOS."
 
 echo "Preparing for installation..."
 cd
