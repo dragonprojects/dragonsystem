@@ -1,15 +1,14 @@
 #!/bin/bash
 
-echo "Welcome to the Dragon OS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
+echo "Welcome to the DragonOS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
 echo "MAKE SURE YOU ARE USING THE NEWEST VERSION OF YOUR DISTRIBUTION!"
 echo "PLEASE MAKE SURE YOU ARE USING A STABLE INTERNET CONNECTION, PREFERABLY WIRED!"
 echo "IF YOU WANT TO CANCEL THE INSTALLATION, TERMINATE THIS PROCESS NOW!"
 sleep 10
-echo "The installer will now start installing Dragon OS."
+echo "The installer will now start installing DragonOS."
 
 echo "Preparing for installation..."
 cd
-sudo apt-get update
 
 echo "Adding repositories to system..."
 sudo add-apt-repository ppa:ricotz/docky
@@ -24,12 +23,22 @@ sudo apt-get install snapd
 sudo apt-get install gdebi
 
 echo "Installing software..."
+<<<<<<< HEAD
+sudo apt-get install bookworm
+sudo apt-get install rythmbox
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+sudo apt-get install vlc
+sudo snap install mailspring
+sudo snap install qalculate
+sudo apt-get install pinta
+=======
 sudo apt-get install firefox
 sudo snap install vlc
 sudo snap install mailspring
 sudo snap install qalculate
 sudo snap install atom
 sudo snap install discord
+>>>>>>> 16fe66bc608fc15c9df912edd139bbea56efe70d
 wget -O atom-amd64.deb https://atom.io/download/deb
 sudo gdebi atom-amd64.deb
 rm atom-amd64.deb
