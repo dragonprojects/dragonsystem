@@ -11,31 +11,46 @@ echo "Preparing for installation..."
 cd ..
 
 echo "Adding repositories to system..."
-sudo add-apt-repository ppa:ricotz/docky
-sudo add-apt-repository ppa:daniruiz/flat-remix
-sudo add-apt-repository ppa:ubuntubudgie/backports
 sudo apt-get update
+
+echo "Installing Budgie desktop environment..."
+sudo apt-get install lightdm
+sudo add-apt-repository ppa:ubuntubudgie/backports && sudo apt-get update
+sudo apt-get install budgie-desktop
+sudo add-apt-repository ppa:ricotz/docky && sudo apt-get update
+sudo apt-get install plank
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
+sudo add-apt-repository ppa:daniruiz/flat-remix && sudo apt-get update
+sudo apt-get install flat-remix
+gsettings set org.gnome.desktop.interface icon-theme 'Flat Remix'
+
+echo "Installing Deepin desktop environment..."
+cat <<EOF | sudo tee /etc/apt/sources.list.d/linuxdeepin.list
+deb http://packages.linuxdeepin.com/ubuntu artfull main non-free universe
+EOF
+wget http://packages.linuxdeepin.com/deepin/project/deepin-keyring.gpg
+gpg --import deepin-keyring.gpg
+sudo gpg --export --armor 209088E7 | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install dde-meta-core
 
 echo "Installing dependencies..."
 sudo apt-get install git
 sudo apt-get install snapd
 sudo apt install gdebi-core
-sudo apt-get install gnome-keyring
-wget -O libpng-amd64.deb http://mirrors.edge.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-sudo gdebi libpng-amd64.deb
-rm libpng-amd64.deb
 
-echo "Installing software..."
+echo "Installing core software..."
+sudo apt-get install software-center
+
+echo "Installing additional software..."
 sudo snap install vlc
-sudo snap install mailspring
-sudo snap install qalculate
+sudo snap install gimp
+sudo snap install gnome-calculator
 sudo snap install firefox
 sudo snap install vlc
-sudo snap install qalculate
-sudo snap install atom
+sudo snap install gedit
 sudo snap install libreoffice
-sudo snap install mailspring
-# WPS Office - to be considered
+# --- WPS Office Installation ---
 # wget -O wps-amd64.deb http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
 # sudo gdebi wps-amd64.deb
 # rm wps-amd64.deb
@@ -45,18 +60,6 @@ sudo snap install mailspring
 # sudo bash install.sh
 # rm -rf /tmp/ttf-wps-fonts
 # cd ..
-
-echo "Installing core desktop environment..."
-sudo apt-get install budgie-desktop
-
-echo "Installing desktop environment additions..."
-sudo apt-get install plank
-gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
-git clone https://github.com/KenHarkey/plank-themes.git
-cd plank-themes
-cp -r shade ~/.local/share/plank/themes/
-cd ..
-rm -rf plank-themes
 
 echo "Completing installation..."
 sudo apt-get update
