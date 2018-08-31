@@ -1,11 +1,16 @@
 #!/bin/bash
 
-echo "Welcome to the DragonOS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
+echo "Welcome to the Dragon OS installer for Ubuntu-based distributions. The installer will automatically start in a moment."
+sleep 10
+echo "YOU MUST KEEP THE FOLLOWING IN MIND:
 echo "MAKE SURE YOU ARE USING THE NEWEST VERSION OF YOUR DISTRIBUTION!"
 echo "PLEASE MAKE SURE YOU ARE USING A STABLE INTERNET CONNECTION, PREFERABLY WIRED!"
+echo "NOBODY CAN BE HELD RESPONSIBLE FOR ANY DAMAGE TO YOUR SYSTEM!"
+echo "AGREE/ACCEPT SOFTWARE INSTALLATIONS WHEN PROMPTED!"
 echo "IF YOU WANT TO CANCEL THE INSTALLATION, TERMINATE THIS PROCESS NOW!"
 sleep 10
-echo "The installer will now start installing Dragon OS."
+echo "The installation of Dragon OS will now follow."
+sleep 10
 
 echo "Preparing for installation..."
 cd ..
@@ -51,7 +56,7 @@ sudo snap install firefox
 sudo snap install vlc
 sudo snap install gedit
 sudo snap install libreoffice
-# --- WPS Office Installation ---
+# --- Optional WPS Office Installation ---
 # wget -O wps-amd64.deb http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
 # sudo gdebi wps-amd64.deb
 # rm wps-amd64.deb
