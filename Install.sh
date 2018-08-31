@@ -10,8 +10,9 @@ echo "The installer will now start installing Dragon OS."
 echo "Preparing for installation..."
 cd ..
 
-echo "Adding repositories to system..."
+echo "Preparing your system..."
 sudo apt-get update
+sudo apt-get upgrade
 
 echo "Installing Budgie desktop environment..."
 sudo apt-get install lightdm
@@ -37,7 +38,7 @@ sudo apt-get install dde-meta-core
 echo "Installing dependencies..."
 sudo apt-get install git
 sudo apt-get install snapd
-sudo apt install gdebi-core
+sudo apt-get install gdebi-core
 
 echo "Installing core software..."
 sudo apt-get install software-center
