@@ -48,6 +48,7 @@ sudo apt-get install gdebi-core
 echo "Installing core software..."
 sudo apt-get install software-center
 
+
 echo "Installing additional software..."
 sudo snap install vlc
 sudo snap install gimp
@@ -56,6 +57,14 @@ sudo snap install firefox
 sudo snap install vlc
 sudo snap install gedit
 sudo snap install libreoffice
+
+# --- Optional Lutris Installation ---
+# ver=$(lsb_release -sr); if [ $ver != "18.04" -a $ver != "17.10" -a $ver != "17.04" -a $ver != "16.04" ]; then ver=18.04; fi
+# echo "deb http://download.opensuse.org/repositories/home:/strycore/xUbuntu_$ver/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list
+# wget -q http://download.opensuse.org/repositories/home:/strycore/xUbuntu_$ver/Release.key -O- | sudo apt-key add -
+# sudo apt-get update
+# sudo apt-get install lutris
+
 # --- Optional WPS Office Installation ---
 # wget -O wps-amd64.deb http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
 # sudo gdebi wps-amd64.deb
