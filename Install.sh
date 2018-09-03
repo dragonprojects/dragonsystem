@@ -19,16 +19,16 @@ echo "Preparing your system..."
 sudo apt-get update
 sudo apt-get upgrade
 
-# echo "Installing Budgie desktop environment..."
-# sudo apt-get install lightdm
-# sudo add-apt-repository ppa:ubuntubudgie/backports && sudo apt-get update
-# sudo apt-get install budgie-desktop
-# sudo add-apt-repository ppa:ricotz/docky && sudo apt-get update
-# sudo apt-get install plank
-# gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
-# sudo add-apt-repository ppa:daniruiz/flat-remix && sudo apt-get update
-# sudo apt-get install flat-remix
-# gsettings set org.gnome.desktop.interface icon-theme 'Flat Remix'
+echo "Installing Budgie desktop environment..."
+sudo apt-get install lightdm
+sudo add-apt-repository ppa:ubuntubudgie/backports && sudo apt-get update
+sudo apt-get install budgie-desktop
+sudo add-apt-repository ppa:ricotz/docky && sudo apt-get update
+sudo apt-get install plank
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false
+sudo add-apt-repository ppa:daniruiz/flat-remix && sudo apt-get update
+sudo apt-get install flat-remix
+gsettings set org.gnome.desktop.interface icon-theme 'Flat Remix'
 
 echo "Installing Deepin desktop environment..."
 cat <<EOF | sudo tee /etc/apt/sources.list.d/linuxdeepin.list
