@@ -11,11 +11,13 @@ echo "Preparing your system..."
 apt-get update -y
 apt-get upgrade -y
 
-echo "Installing required packages..."
+echo "Installing Debian packages..."
 apt-get install -y flatpak
 
 echo "Removing unneeded packages..."
 apt autoremove --purge -y snapd
 
-echo "Setting up flatpak repositories.."
-flatpak remote-add fedora oci+https://registry.fedoraproject.org
+echo "Setting up Flatpak repositories.."
+flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraproject.org # Fedora
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo #Flathub
+flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Winepak
