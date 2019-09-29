@@ -1,10 +1,13 @@
 #!/bin/bash
 
-echo "Welcome to the Dragon OS installer for the Ubuntu 18 Minimal ISO. The installer will automatically start in a moment."
-sleep 5
-echo "Using Dragon OS comes with no warrenty. Our source code can be viewed on https://github.com/jelle619/dragonos/."
-echo "To agree and start the installation of Dragon OS, enter your password."
-sleep 10
+whiptail --msgbox "Welcome to the Dragon OS installer. To proceed, enter your user password after pressing OK." 10 50
+echo "Please enter your password to proceed."
+sudo -s
+if [ "$EUID" -ne 0 ]
+  then echo "Yikes! That didn't seem to work. To try again, restart the installer while make sure you are using an administrator account."
+  exit
+fi
+whiptail --yesno "Would you like to begin the installation of Dragon OS? Please note that Dragon OS does not come with a warrenty of any kind. Cancelling the installation past this point may leave your system unusable." 10 50
 
 
 echo "Preparing your system..."
