@@ -5,7 +5,7 @@ Repository for the Dragon OS Linux distribution.
 1. Download the Ubuntu 18.04 Minimal ISO and install it onto your system.
 2. Use the following command:
 ```bash
-wget -P /tmp https://raw.githubusercontent.com/jelle619/dragonos/master/install.sh && bash /tmp/install.sh
+wget -P /tmp https://raw.githubusercontent.com/jelle619/dragonos/master/install.sh -O install.sh && bash /tmp/install.sh
 ```
 or, alternatively
 ```bash
