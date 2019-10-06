@@ -4,7 +4,7 @@ whiptail --msgbox "Welcome to the Dragon OS installer. To proceed, enter your us
 echo "Please enter your password to proceed."
 sudo -s
 if [ "$EUID" -ne 0 ]
-  then echo "Yikes! That didn't seem to work. To try again, restart the installer while make sure you are using an administrator account."
+  then echo "Yikes! That didn't seem to work. To try again, restart the installer while making sure you are using an administrator account."
   exit
 fi
 whiptail --yesno "Would you like to begin the installation of Dragon OS? Please note that Dragon OS does not come with a warrenty of any kind. Cancelling the installation past this point may leave your system unusable." 10 50
