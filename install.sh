@@ -14,7 +14,7 @@ apt-get update -y
 apt-get upgrade -y
 
 echo "Installing system software..."
-apt-get install -y gdm3 gnome-session gnome-icon-theme --no-install-recommends # GNOME
+apt-get install -y gdm3 gnome-session gnome-icon-theme gnome-shell-extension-dashtodock --no-install-recommends # GNOME
 apt-get install -y xserver-xorg # X.Org Server
 apt-get install -y flatpak gnome-software-plugin-flatpak # Flatpak
 apt-get install -y ffmpeg # ffmpeg, needed for Firefox
@@ -32,6 +32,7 @@ apt-get install -y software-properties-gtk
 echo "Configuring installed software..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Add Flathub and Winepak repo for Flatpak
 sed -i -e 's/networkd/NetworkManager/g' /etc/netplan/01-netcfg.yaml # Set NetworkManager to manage networks
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
 
 echo "Cleaning up unneeded files and software..."
 apt autoremove --purge -y snapd
