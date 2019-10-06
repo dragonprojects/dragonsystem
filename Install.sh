@@ -14,13 +14,30 @@ echo "Preparing your system..."
 apt-get update -y
 apt-get upgrade -y
 
-echo "Installing Debian packages..."
-apt-get install -y flatpak
+echo "Installing system software..."
+apt-get install -y gdm3 gnome-session gnome-icon-theme --no-install-recommends # GNOME
+apt-get install -y xserver-xorg # X.Org Server
+apt-get install -y flatpak gnome-software-plugin-flatpak # Flatpak
+apt-get install -y ffmpeg # ffmpeg, needed for Firefox
 
-echo "Removing unneeded packages..."
+echo "Installing system applications..."
+# GNOME
+apt-get install -y nautilus
+apt-get install -y gnome-control-center
+apt-get install -y gnome-terminal
+apt-get install -y gnome-software
+# Other
+apt-get install -y firefox # Firefox, needs ffmpeg
+apt-get install -y software-properties-gtk
+
+echo "Configuring installed software..."
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Add Flathub and Winepak repo for Flatpak
+sed -i -e 's/networkd/NetworkManager/g' /etc/netplan/01-netcfg.yaml # Set NetworkManager to manage networks
+
+echo "Cleaning up unneeded files and software..."
 apt autoremove --purge -y snapd
+rm /usr/share/applications/software-properties-livepatch.desktop
 
-echo "Setting up Flatpak repositories.."
-flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraproject.org # Fedora
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo #Flathub
-flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Winepak
+echo "Initiating system reboot..."
+sleep 3
+reboot
