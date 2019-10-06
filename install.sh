@@ -9,7 +9,6 @@ if [ "$EUID" -ne 0 ]
 fi
 whiptail --yesno "Would you like to begin the installation of Dragon OS? Please note that Dragon OS does not come with a warrenty of any kind. Cancelling the installation past this point may leave your system unusable." 10 50
 
-
 echo "Preparing your system..."
 apt-get update -y
 apt-get upgrade -y
