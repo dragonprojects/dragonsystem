@@ -4,7 +4,7 @@ if [ "$EUID" -ne 0 ]
   then echo "Yikes! That didn't seem to work. To try again, restart the installer as the root user."
   exit
 fi
-whiptail --yesno "Would you like to begin the installation of Dragon OS? Please note that Dragon OS does not come with a warrenty of any kind. Cancelling the installation past this point may leave your system unusable." 10 50
+whiptail --title "Welcome to the Dragon OS installer. Pressing OK will begin your installation." 8 78
 
 echo "Preparing your system..."
 apt-get update -y
