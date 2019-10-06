@@ -36,7 +36,7 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize
 
 echo "Cleaning up unneeded files and software..."
 apt autoremove --purge -y snapd
-rm /usr/share/applications/software-properties-livepatch.desktop
+rm -f /usr/share/applications/software-properties-livepatch.desktop
 
 echo "Initiating system reboot..."
 sleep 3
