@@ -22,6 +22,8 @@ apt-get install -y nautilus
 apt-get install -y gnome-control-center
 apt-get install -y gnome-terminal
 apt-get install -y gnome-software
+apt-get install -y software-properties-gtk
+
 # Other
 apt-get install -y firefox # Firefox, needs ffmpeg
 apt-get install -y software-properties-gtk
@@ -32,7 +34,7 @@ sed -i -e 's/networkd/NetworkManager/g' /etc/netplan/01-netcfg.yaml # Set Networ
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
 
 echo "Cleaning up unneeded files and software..."
-apt autoremove --purge -y snapd
+apt autoremove --purge -y snapd && rm -rf /var/cache/snapd/ && rm -fr ~/snap # Remove snap support completely
 rm -f /usr/share/applications/software-properties-livepatch.desktop
 
 echo "Initiating system reboot..."
