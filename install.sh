@@ -13,8 +13,8 @@ apt-get upgrade -y
 echo "Installing system software..."
 apt-get install -y gdm3 gnome-session gnome-icon-theme gnome-shell-extension-dashtodock --no-install-recommends # GNOME
 apt-get install -y xserver-xorg # X.Org Server
-apt-get install -y flatpak gnome-software-plugin-flatpak # Flatpak
-apt-get install -y ffmpeg # ffmpeg, needed for Firefox
+apt-get install -y flatpak gnome-software-plugin-flatpak && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo # Flatpak
+apt-get install -y network-manager-openvpn-gnome # Support for OpenVPN
 
 echo "Installing system applications..."
 # GNOME
@@ -24,8 +24,9 @@ apt-get install -y gnome-terminal
 apt-get install -y gnome-software
 apt-get install -y software-properties-gtk
 
-# Other
+# Installing additional applications...
 flatpak install flathub org.mozilla.firefox -y
+flatpak install flathub com.transmissionbt.Transmission -y
 
 echo "Configuring installed software..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Add Flathub and Winepak repo for Flatpak
