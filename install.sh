@@ -25,8 +25,7 @@ apt-get install -y gnome-software
 apt-get install -y software-properties-gtk
 
 # Other
-apt-get install -y firefox # Firefox, needs ffmpeg
-apt-get install -y software-properties-gtk
+flatpak install flathub org.mozilla.firefox -y
 
 echo "Configuring installed software..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo # Add Flathub and Winepak repo for Flatpak
