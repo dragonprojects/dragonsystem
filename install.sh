@@ -15,6 +15,7 @@ apt-get install -y gdm3 gnome-session gnome-icon-theme --no-install-recommends #
 apt-get install -y xserver-xorg # X.Org Server
 apt-get install -y flatpak gnome-software-plugin-flatpak && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo # Flatpak
 apt-get install -y network-manager network-manager-openvpn-gnome # Network manager for GNOME with OpenVPN support
+apt-get install -y unzip # Required for some applications to function properly
 
 echo "Installing system applications..."
 # GNOME
