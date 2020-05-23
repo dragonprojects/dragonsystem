@@ -26,7 +26,15 @@ apt-get install -y gnome-software
 apt-get install -y software-properties-gtk
 
 # Installing additional applications...
-flatpak install flathub org.mozilla.firefox -y
+flatpak install flathub org.mozilla.firefox -y # Firefox
+flatpak install flathub org.mozilla.Thunderbird -y # Thunderbird
+flatpak install flathub org.gnome.gedit -y # Gedit
+flatpak install flathub ca.desrt.dconf-editor -y # Dconf
+flatpak install flathub org.gimp.GIMP -y # GIMP
+flatpak install flathub org.videolan.VLC -y # VLC
+flatpak install flathub org.gnome.eog -y # Eye of GNOME
+flatpak install flathub org.gnome.Extensions -y # Extensions
+flatpak install flathub com.github.tchx84.Flatseal -y # Flatseal
 
 echo "Configuring installed software..."
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
