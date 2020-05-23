@@ -33,10 +33,10 @@ flatpak install flathub ca.desrt.dconf-editor -y # Dconf
 flatpak install flathub org.gimp.GIMP -y # GIMP
 flatpak install flathub org.videolan.VLC -y # VLC
 flatpak install flathub org.gnome.eog -y # Eye of GNOME
-flatpak install flathub org.gnome.Extensions -y # Extensions
 flatpak install flathub com.github.tchx84.Flatseal -y # Flatseal
 
 echo "Configuring installed software..."
+sed -i 's/managed=false/managed=true/g' /etc/NetworkManager/NetworkManager.conf # Set NetworkManager to manage networks
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
 
 echo "Initiating system reboot..."
