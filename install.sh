@@ -16,6 +16,7 @@ apt-get install -y xserver-xorg # X.Org Server
 apt-get install -y flatpak gnome-software-plugin-flatpak && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo # Flatpak
 apt-get install -y network-manager network-manager-openvpn-gnome # Network manager for GNOME with OpenVPN support
 apt-get install -y unzip # Required for some applications to function properly
+apt-get install -y xdg-user-dirs # Application capable of setting up the default XDG home directories
 
 echo "Installing system applications..."
 # GNOME
@@ -38,6 +39,7 @@ flatpak install flathub com.github.tchx84.Flatseal -y # Flatseal
 echo "Configuring installed software..."
 sed -i 's/managed=false/managed=true/g' /etc/NetworkManager/NetworkManager.conf # Set NetworkManager to manage networks
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
+xdg-user-dirs-update # Sets up the default home directories for the user
 
 echo "Initiating system reboot..."
 sleep 3
