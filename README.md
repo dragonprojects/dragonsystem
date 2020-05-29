@@ -8,3 +8,4 @@ Repository for the Dragon OS Linux distribution.
 ```bash
 apt install wget -y && wget https://raw.githubusercontent.com/jelle619/dragonos/master/install.sh -O /tmp/install.sh && bash /tmp/install.sh
 ```
+4. Enjoy using Dragon OS!
