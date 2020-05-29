@@ -2,7 +2,7 @@
 Repository for the Dragon OS Linux distribution.
 
 ## Installation
-1. Download the Ubuntu 18.04 Minimal ISO and install it onto your system.
+1. Download the [Debian](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.4.0-amd64-netinst.iso) and install it onto your system.
 2. Switch to the root user using ``sudo -s``
 3. Begin the installation by using the following command:
 ```bash
