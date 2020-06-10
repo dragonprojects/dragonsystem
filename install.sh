@@ -35,6 +35,7 @@ flatpak install flathub org.gimp.GIMP -y # GIMP
 flatpak install flathub org.videolan.VLC -y # VLC
 flatpak install flathub org.gnome.eog -y # Eye of GNOME
 flatpak install flathub com.github.tchx84.Flatseal -y # Flatseal
+flatpak install flathub org.gnome.seahorse.Application # Seahorse
 
 echo "Configuring installed software..."
 sed -i 's/managed=false/managed=true/g' /etc/NetworkManager/NetworkManager.conf # Set NetworkManager to manage networks
