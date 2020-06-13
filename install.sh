@@ -21,6 +21,7 @@ apt-get install -y xdg-user-dirs # Application capable of setting up the default
 echo "Installing system applications..."
 # GNOME
 apt-get install -y nautilus
+# flatpak install flathub org.gnome.Nautilus # Nautilus
 apt-get install -y gnome-control-center
 apt-get install -y gnome-terminal
 apt-get install -y gnome-software
