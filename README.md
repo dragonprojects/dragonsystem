@@ -6,7 +6,7 @@ Repository for the Dragon OS Linux distribution.
 2. Switch to the root user using ``sudo -s``
 3. Begin the installation by using the following command:
 ```bash
-apt install wget -y && wget https://raw.githubusercontent.com/jelle619/dragonos/master/install.sh -O /tmp/install.sh && bash /tmp/install.sh
+apt install wget -y && wget https://raw.githubusercontent.com/dragonprojects/dragonos/master/install.sh -O /tmp/install.sh && bash /tmp/install.sh
 ```
 4. Enjoy using Dragon OS!
 
