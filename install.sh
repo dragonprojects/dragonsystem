@@ -28,7 +28,7 @@ apt-get install -y gnome-software
 apt-get install -y software-properties-gtk
 
 # Installing additional applications...
-flatpak install flathub org.kde.ark -y # Ark
+flatpak install flathub org.gnome.FileRoller # File Roller
 flatpak install flathub org.mozilla.firefox -y # Firefox
 flatpak install flathub org.mozilla.Thunderbird -y # Thunderbird
 flatpak install flathub org.gnome.gedit -y # Gedit
