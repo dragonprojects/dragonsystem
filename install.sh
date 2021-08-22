@@ -43,7 +43,7 @@ flatpak install flathub org.gnome.seahorse.Application -y # Seahorse
 
 echo "Configuring installed software..."
 sed -i 's/managed=false/managed=true/g' /etc/NetworkManager/NetworkManager.conf # Set NetworkManager to manage networks
-gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
+# gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close' # Set button layout for windows
 xdg-user-dirs-update # Sets up the default home directories for the user
 
 echo "Initiating system reboot..."
