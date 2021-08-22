@@ -1,5 +1,5 @@
-# Dragon OS
-Repository for the Dragon OS Linux distribution.
+# Dragon System
+Repository for the Dragon System Linux distribution.
 
 ## Installation
 1. Download the [Debian network installer](https://www.debian.org/distrib/netinst) and install it onto your system.
