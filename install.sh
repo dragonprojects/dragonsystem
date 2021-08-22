@@ -36,6 +36,7 @@ flatpak install flathub org.gnome.Calculator -y # Calculator
 flatpak install flathub ca.desrt.dconf-editor -y # Dconf
 flatpak install flathub org.videolan.VLC -y # VLC
 flatpak install flathub org.gnome.eog -y # Eye of GNOME
+flatpak install flathub org.gnome.Evince -y # Evince
 flatpak install flathub org.libreoffice.LibreOffice -y # LibreOffice
 flatpak install flathub com.github.tchx84.Flatseal -y # Flatseal
 flatpak install flathub org.gnome.seahorse.Application # Seahorse
