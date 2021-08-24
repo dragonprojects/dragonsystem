@@ -26,6 +26,8 @@ apt-get install -y gnome-terminal
 apt-get install -y gnome-software
 apt-get install -y gnome-tweaks
 apt-get install -y software-properties-gtk
+apt-get install -y cups # CUPS, this enables printers
+
 
 # Installing additional applications...
 flatpak install flathub org.gnome.FileRoller -y # File Roller
