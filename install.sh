@@ -19,14 +19,16 @@ apt-get install -y xdg-user-dirs # Application capable of setting up the default
 
 echo "Installing system applications..."
 # GNOME
-apt-get install -y nautilus
+apt-get install -y nautilus # Nautilus, GNOME's file manager
 # flatpak install flathub org.gnome.Nautilus # Nautilus
-apt-get install -y gnome-control-center
+apt-get install -y gnome-control-center # Control center, a.k.a. GNOME settings
 apt-get install -y gnome-terminal
 apt-get install -y gnome-software
 apt-get install -y gnome-tweaks
 apt-get install -y software-properties-gtk
 apt-get install -y cups # CUPS, this enables printers
+apt-get install -y openssh-client # OpenSSH client, allows connecting to SSH
+
 
 
 # Installing additional applications...
