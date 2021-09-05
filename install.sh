@@ -25,14 +25,12 @@ apt-get install -y gnome-control-center # Control center, a.k.a. GNOME settings
 apt-get install -y gnome-terminal
 apt-get install -y gnome-software
 apt-get install -y gnome-tweaks
+apt-get install -y gnome-disk-utility
 apt-get install -y software-properties-gtk
 apt-get install -y cups # CUPS, this enables printers
 apt-get install -y openssh-client # OpenSSH client, allows connecting to SSH
 
-
-
 # Installing additional applications...
-flatpak install flathub org.gnome.FileRoller -y # File Roller
 flatpak install flathub org.mozilla.firefox -y # Firefox
 flatpak install flathub org.mozilla.Thunderbird -y # Thunderbird
 flatpak install flathub org.gnome.gedit -y # Gedit
