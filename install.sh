@@ -29,6 +29,7 @@ apt-get install -y gnome-disk-utility
 apt-get install -y software-properties-gtk
 apt-get install -y cups # CUPS, this enables printers
 apt-get install -y openssh-client # OpenSSH client, allows connecting to SSH
+apt-get install -y gnome-shell-extension-dashtodock # Install Dash to Dock extension for dock support
 
 # Installing additional applications...
 flatpak install flathub org.mozilla.firefox -y # Firefox
