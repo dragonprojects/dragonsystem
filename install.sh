@@ -17,6 +17,9 @@ apt-get install -y flatpak gnome-software-plugin-flatpak && flatpak remote-add -
 apt-get install -y network-manager network-manager-openvpn-gnome # Network manager for GNOME with OpenVPN support
 apt-get install gnome-themes-extra -y # Extra themes, such as Adwaita dark.
 apt-get install -y xdg-user-dirs # Application capable of setting up the default XDG home directories
+apt-get install -y cups # CUPS, this enables printers
+apt-get install -y openssh-client # OpenSSH client, allows connecting to SSH
+apt-get install -y gnome-shell-extension-dashtodock # Install Dash to Dock extension for dock support
 
 echo "Installing system applications..."
 # GNOME
@@ -28,9 +31,6 @@ apt-get install -y gnome-software
 apt-get install -y gnome-tweaks
 apt-get install -y gnome-disk-utility
 apt-get install -y software-properties-gtk
-apt-get install -y cups # CUPS, this enables printers
-apt-get install -y openssh-client # OpenSSH client, allows connecting to SSH
-apt-get install -y gnome-shell-extension-dashtodock # Install Dash to Dock extension for dock support
 
 # Installing additional applications...
 flatpak install flathub org.mozilla.firefox -y # Firefox
